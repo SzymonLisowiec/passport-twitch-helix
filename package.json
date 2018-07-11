@@ -1,6 +1,6 @@
 {
-  "name": "passport-twitch",
-  "version": "1.0.3",
+  "name": "passport-twitch-helix",
+  "version": "1.0.4",
   "description": "Twitch (OAuth) authentication strategies for Passport.",
   "keywords": [
     "passport",
@@ -15,15 +15,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/Schmoopiie/passport-twitch.git"
+    "url": "git://github.com/atribecalledkwest/passport-twitch-helix.git"
   },
   "bugs": {
-    "url": "http://github.com/Schmoopiie/passport-twitch/issues"
+    "url": "http://github.com/atribecalledkwest/passport-twitch-helix/issues"
   },
   "author": {
-    "name": "Schmoopiie",
-    "email": "Schmoopiie@gmail.com",
-    "url": "http://www.schmoopiie.com/"
+    "name": "Karen West",
+    "email": "atribecalledkwest.97@gmail.com"
   },
   "licenses": [
     {
@@ -31,7 +30,7 @@
       "url": "http://www.opensource.org/licenses/MIT"
     }
   ],
-  "main": "./lib/passport-twitch",
+  "main": "./lib/passport-twitch-helix",
   "dependencies": {
     "passport-oauth2": "^1.1.2",
     "pkginfo": "0.2.x"
@@ -44,8 +43,8 @@
   },
   "maintainers": [
     {
-      "name": "Schmoopiie",
-      "email": "Schmoopiie@gmail.com"
+      "name": "Karen West",
+      "email": "atribecalledkwest.97@gmail.com"
     }
   ],
   "directories": {},

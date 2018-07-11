@@ -1,7 +1,5 @@
-# passport-twitch
-[![Code Climate](https://codeclimate.com/github/Schmoopiie/passport-twitch/badges/gpa.svg)](https://codeclimate.com/github/Schmoopiie/passport-twitch)
-
-Twitch is a trademark or registered trademark of Twitch Interactive, Inc. in the U.S. and/or other countries. "passport-twitch" is not operated by, sponsored by, or affiliated with Twitch Interactive, Inc. in any way.
+# passport-twitch-helix
+Twitch is a trademark or registered trademark of Twitch Interactive, Inc. in the U.S. and/or other countries. "passport-twitch-helix" is not operated by, sponsored by, or affiliated with Twitch Interactive, Inc. in any way.
 
 [Passport](http://passportjs.org/) strategies for authenticating with [Twitch](http://www.twitch.tv/)
 using OAuth 2.0.
@@ -14,7 +12,7 @@ unobtrusively integrated into any application or framework that supports
 
 ## Install
 ```bash
-$ npm install passport-twitch
+$ npm install passport-twitch-helix
 ```
 ## Usage of OAuth 2.0
 
@@ -27,13 +25,13 @@ accepts these credentials and calls `done` providing a user, as well as
 
 ```javascript
 var passport       = require("passport");
-var twitchStrategy = require("passport-twitch").Strategy;
+var twitchStrategy = require("passport-twitch-helix").Strategy;
 
 passport.use(new twitchStrategy({
     clientID: TWITCH_CLIENT_ID,
     clientSecret: TWITCH_CLIENT_SECRET,
     callbackURL: "http://127.0.0.1:3000/auth/twitch/callback",
-    scope: "user_read"
+    scope: "user_read:email analytics:read:games"
   },
   function(accessToken, refreshToken, profile, done) {
     User.findOrCreate({ twitchId: profile.id }, function (err, user) {
@@ -74,7 +72,7 @@ var bodyParser     = require("body-parser");
 var cookieParser   = require("cookie-parser");
 var cookieSession  = require("cookie-session");
 var passport       = require("passport");
-var twitchStrategy = require("passport-twitch").Strategy;
+var twitchStrategy = require("passport-twitch-helix").Strategy;
 
 var app = express();
 
@@ -92,7 +90,7 @@ passport.use(new twitchStrategy({
     clientID: "098f6bcd4621d373cade4e832627b4f6",
     clientSecret: "4eb20288afaed97e82bde371260db8d8",
     callbackURL: "http://127.0.0.1:3000/auth/twitch/callback",
-    scope: "user_read"
+    scope: "user:read:email analytics:read:games"
   },
   function(accessToken, refreshToken, profile, done) {
     // Suppose we are using mongo..
